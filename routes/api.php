@@ -10,7 +10,7 @@ Route::get('/user', function (Request $request) {
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
 
-Route::get('/products', [ProductController::class, 'index'])->middleware('request.lo...'); // (baris asli, jangan diubah)
+Route::get('/products', [ProductController::class, 'index'])->middleware('request.logger');
 Route::post('/products', [ProductController::class, 'store']);
 
 Route::post('/login', [AuthController::class, 'login']);
